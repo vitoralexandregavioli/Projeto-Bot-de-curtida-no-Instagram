@@ -4,7 +4,7 @@ import pyperclip
 import webbrowser
 
 
-# LAÇO: Após 24hrs rodar tudo denovo
+# LAÇO: Após 24hrs rodar tudo denovo.
 while True:
     # 1- navegar até o instagram "https://www.instagram.com"
     webbrowser.open_new_tab('https://www.instagram.com')
@@ -20,13 +20,13 @@ while True:
     button_user = pyautogui.locateCenterOnScreen('button_user.png',confidence=0.8)
     pyautogui.moveTo(button_user[0],button_user[1],duration=1)
     pyautogui.leftClick()
-    escrever('Insirir usuário')
+    escrever('Inserir um usuário')
 
     # 3- entrar com minha senha
     button_password = pyautogui.locateCenterOnScreen('button_password.png',confidence=0.8)
     pyautogui.moveTo(button_password[0],button_password[1],duration=1)
     pyautogui.leftClick()
-    escrever('Inserir senha')
+    escrever('Inserir uma senha')
 
     # 4- clicar em login
     button_login = pyautogui.locateCenterOnScreen('button_login.png',confidence=0.8)
