@@ -20,13 +20,13 @@ while True:
     button_user = pyautogui.locateCenterOnScreen('button_user.png',confidence=0.8)
     pyautogui.moveTo(button_user[0],button_user[1],duration=1)
     pyautogui.leftClick()
-    escrever('vithin._444')
+    escrever('Insirir usuário')
 
     # 3- entrar com minha senha
     button_password = pyautogui.locateCenterOnScreen('button_password.png',confidence=0.8)
     pyautogui.moveTo(button_password[0],button_password[1],duration=1)
     pyautogui.leftClick()
-    escrever('Mlzucati#57')
+    escrever('Inserir senha')
 
     # 4- clicar em login
     button_login = pyautogui.locateCenterOnScreen('button_login.png',confidence=0.8)
