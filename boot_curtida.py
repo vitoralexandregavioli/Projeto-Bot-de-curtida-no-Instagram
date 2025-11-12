@@ -87,35 +87,25 @@ while True:
         # 10 verificar se já está curtida se não estiver curtido, curtir foto e comentar
         gray_like = pyautogui.locateCenterOnScreen('grey_like.png',confidence=0.7, region=(900,800, 200, 150))
 
-        if gray_like is not None:
-            
-            pyautogui.leftClick(gray_like[0],gray_like[1],duration=1) 
-            comment = pyautogui.locateCenterOnScreen('comment.png',confidence=0.8)
-            pyautogui.leftClick(comment[0],comment[1],duration=1)
-            escrever('Top demais 🔥')
-            pyautogui.press('enter')
-            sleep(1)
+        pyautogui.leftClick(gray_like[0],gray_like[1],duration=1) 
+        comment = pyautogui.locateCenterOnScreen('comment.png',confidence=0.8)
+        pyautogui.leftClick(comment[0],comment[1],duration=1)
+        escrever('Top demais 🔥')
+        pyautogui.press('enter')
+        sleep(1)
 
-            #sair da conta
-            pyautogui.press('esc')
-            config_menu = pyautogui.locateCenterOnScreen('config.png',confidence=0.8)  
-            pyautogui.leftClick(config_menu[0],config_menu[1],duration=1)
-            log_off = pyautogui.locateCenterOnScreen('log_off.png')
-            pyautogui.leftClick(log_off[0],log_off[1],duration=1)
+        #sair da conta
+        pyautogui.press('esc')
+        config_menu = pyautogui.locateCenterOnScreen('config.png',confidence=0.8)  
+        pyautogui.leftClick(config_menu[0],config_menu[1],duration=1)
+        log_off = pyautogui.locateCenterOnScreen('log_off.png')
+        pyautogui.leftClick(log_off[0],log_off[1],duration=1)
 
-            sleep(1)
-            pyautogui.press('f11')
-            sleep(1)
-            pyautogui.hotkey('ctrl','w')
+        sleep(1)
+        pyautogui.press('f11')
+        sleep(1)
+        pyautogui.hotkey('ctrl','w')
 
 
-            # pausar por 24hrs
-            sleep(86.400)
-
-
-
-
-
-
-
-
+        # pausar por 24hrs
+        sleep(86.400)
