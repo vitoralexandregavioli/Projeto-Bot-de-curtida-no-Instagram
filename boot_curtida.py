@@ -2,7 +2,14 @@ import pyautogui
 from time import sleep
 import pyperclip
 import webbrowser
+import random
 
+
+#Medidas de segurança para parar automação
+pyautogui.FAILSAFE = True
+
+#Pausa entre as atividades de maneira aleatoria para ficar mais humano
+pyautogui.PAUSE = random.randint(2,3)
 
 # LAÇO: Após 24hrs rodar tudo denovo.
 while True:
@@ -38,7 +45,7 @@ while True:
     button_notnow_instagram = pyautogui.locateCenterOnScreen('button_notnow_instagram.png',confidence=0.8)
     pyautogui.moveTo(button_notnow_instagram[0],button_notnow_instagram[1],duration=1)
     pyautogui.leftClick()
-    sleep(1)
+    
 
     # 6 pesquisar pagina
     button_search = pyautogui.locateCenterOnScreen('button_search.png',confidence=0.8)
@@ -73,12 +80,13 @@ while True:
         log_off = pyautogui.locateCenterOnScreen('log_off.png')
         pyautogui.leftClick(log_off[0],log_off[1],duration=1)
 
-        sleep(1)
+        #fechar aba
         pyautogui.press('f11')
-        sleep(1)
         pyautogui.hotkey('ctrl','w')
-        sleep(1)
+
+        #mensagem no terminal
         print("Post já está curtido! Aguardando 24 horas...")
+
         # pausar por 24hrs
         sleep(86.400)
 
@@ -92,7 +100,6 @@ while True:
         pyautogui.leftClick(comment[0],comment[1],duration=1)
         escrever('Top demais 🔥')
         pyautogui.press('enter')
-        sleep(1)
 
         #sair da conta
         pyautogui.press('esc')
@@ -101,11 +108,12 @@ while True:
         log_off = pyautogui.locateCenterOnScreen('log_off.png')
         pyautogui.leftClick(log_off[0],log_off[1],duration=1)
 
-        sleep(1)
+        #fechar aba
         pyautogui.press('f11')
-        sleep(1)
         pyautogui.hotkey('ctrl','w')
 
+        #mensagem no terminal
+        print("Post curtido! Aguardando 24 horas...")
 
         # pausar por 24hrs
         sleep(86.400)
